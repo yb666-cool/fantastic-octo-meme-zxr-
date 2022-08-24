@@ -164,7 +164,7 @@ def lucky():
             res = conn.getresponse()
             data = res.read()
             data = json.loads(data)
-            data = "爱情指数："+str(data["newslist"][1]["content"])+"   工作指数："+str(data["newslist"][2]["content"])+"\n今日概述："+str(data["newslist"][8]["content"])
+            data =str(data["newslist"][8]["content"])
             return data
         except:
             return ("星座运势API调取错误，请检查API是否正确申请或是否填写正确")
